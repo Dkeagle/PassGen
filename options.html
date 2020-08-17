@@ -3,11 +3,38 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Untitled001</title>
+	<title>Configuration</title>
 	<link rel="stylesheet" href="main.css">
 	<script src="options.js"></script>
 </head>
 <body>
-	<h1>Coucou</h1>
+	<h1>PassGen</h1>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et pharetra lacus, ac vulputate erat. Sed fermentum mauris in ex eleifend condimentum. Maecenas et metus a ligula convallis volutpat vitae vitae felis. In vel lectus in erat tempus placerat. Vivamus non imperdiet ipsum, at viverra leo. Donec ac luctus nisl, ut porttitor ex. Praesent congue ex nec gravida consequat. Proin vitae eros turpis. Ut a finibus magna. Quisque maximus nulla eros, a porta risus vehicula sit amet. Phasellus vitae nisl mauris. Mauris luctus a urna ut egestas. Mauris quis nibh turpis.
+
+		In suscipit lobortis mauris sit amet auctor. Cras condimentum in lectus quis suscipit. In eu eros et eros vehicula finibus. Integer ac neque ipsum. Ut faucibus pharetra erat sit amet laoreet. Morbi semper odio nec purus mollis sagittis. In volutpat orci in enim pellentesque sollicitudin. Mauris consectetur consectetur porttitor. Praesent lacinia nulla quam, et tempor mi consequat et. Sed consectetur placerat enim, vitae mattis magna pretium ut. Donec sit amet mauris ac est luctus dictum in id nulla. Vivamus sed magna sollicitudin, condimentum orci eu, luctus lorem. Maecenas non aliquam arcu, ac dignissim ligula. Mauris nulla lorem, laoreet vel ante eu, vulputate tristique nisi.
+	</p>
+	<fieldset>
+		<legend>Configuration</legend>
+		<label for="lengthInput">Password length</label>
+		<input type="range" id="lengthInput" min="11" max="42" value="17">
+		<output id="lengthOutput"></output>
+		<br>
+		<label for="numbersInput">Include numbers ?</label>
+		<input type="checkbox" id="numbersInput">
+		<br>
+		<label for="symbolsInput">Include symbols ?</label>
+		<input type="checkbox" id="symbolsInput">
+		<br>
+		<label for="uppercaseInput">Include uppercase ?</label>
+		<input type="checkbox" id="uppercaseInput">
+	</fieldset>
+	<fieldset>
+		<legend>Generator</legend>
+		<input type="text" id="genOutput"></input>
+		<button id="genButton">Generate</button>
+		<button id="copyButton">Copy</button>
+		<p id="errorLog"></p>
+	</fieldset>
 </body>
 </html>

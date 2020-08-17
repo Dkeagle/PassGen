@@ -60,42 +60,9 @@ function generate(output){
 }
 
 window.onload = function(){
-	// Grab every input and buttons in the form
-	let lengthInput = document.getElementById("lengthInput");
-	let lengthOutput = document.getElementById("lengthOutput");
-	let numbersInput = document.getElementById("numbersInput");
-	let symbolsInput = document.getElementById("symbolsInput");
-	let uppercaseInput = document.getElementById("uppercaseInput");
-	
 	let genButton = document.getElementById("genButton");
 	let genOutput = document.getElementById("genOutput");
 	let copyButton = document.getElementById("copyButton");
-
-	// Update the options page, based on the stored value
-	chrome.storage.sync.get(['PassGenLength'], function(e){ lengthInput.value = e.PassGenLength; lengthOutput.value = e.PassGenLength; });
-	chrome.storage.sync.get(['PassGenNumbers'], function(e){ numbersInput.checked = e.PassGenNumbers; });
-	chrome.storage.sync.get(['PassGenSymbols'], function(e){ symbolsInput.checked = e.PassGenSymbols; });
-	chrome.storage.sync.get(['PassGenUppercase'], function(e){ uppercaseInput.checked = e.PassGenUppercase; });
-	
-	// Update the length output in realtime too
-	lengthOutput.innerHTML = lengthInput.value;
-	lengthInput.addEventListener("input", function(){
-		lengthOutput.innerHTML = lengthInput.value;
-	});
-
-	// Update them in the storage everytime they're edited
-	lengthInput.addEventListener("input", function(){
-		chrome.storage.sync.set({PassGenLength: lengthInput.value});
-	});
-	numbersInput.addEventListener("change", function(){
-		chrome.storage.sync.set({PassGenNumbers: numbersInput.checked});
-	});
-	symbolsInput.addEventListener("change", function(){
-		chrome.storage.sync.set({PassGenSymbols: symbolsInput.checked});
-	});
-	uppercaseInput.addEventListener("change", function(){
-		chrome.storage.sync.set({PassGenUppercase: uppercaseInput.checked});
-	});
 
 	// Handle the buttons
 	genButton.addEventListener("click", () => {generate(genOutput)});
